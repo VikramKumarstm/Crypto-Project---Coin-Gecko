@@ -2,13 +2,13 @@ import React, {useEffect, useState} from 'react'
 import { fetchCoinData } from '../../services/fetchCoinData'
 import {useQuery} from '@tanstack/react-query'
 
-function CoinTable() {
+function CoinTable({ currency }) {
 
   const [page, setPage] = useState(1);
 
   const {data, isLoading, isError, error} = useQuery({
-    queryKey: ['coins', page],
-    queryFn: () => fetchCoinData({page, currency:'usd'}),
+    queryKey: ['coins', page, currency],
+    queryFn: () => fetchCoinData({page, currency}),
     // retry: 2,
     // retryDelay: 1000,
     cacheTime: 1000*60*2,
