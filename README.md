@@ -1,16 +1,14 @@
-# React + Vite
+## Crypto currency price tracking app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Deployed URL](https://crypto-project-coin-gecko-sigma.vercel.app/)
 
-Currently, two official plugins are available:
+- Reusable components made using presenter container pattern
+- Custom hooks implemented
+- State management done by zustand
+- Consuming CoinGecko free API
+- API requests are cached using React query
+- Suspense and error boundaries implemented
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<img width="1899" height="907" alt="Screenshot 2025-10-26 074959" src="https://github.com/user-attachments/assets/270ad827-48dd-44f3-8871-2775f212e8c4" />
+<img width="1918" height="908" alt="Screenshot 2025-10-26 075121" src="https://github.com/user-attachments/assets/7aed0b68-8871-4934-9dc5-e8eb750a55a4" />
+<img width="1904" height="875" alt="Screenshot 2025-10-26 075209" src="https://github.com/user-attachments/assets/04551146-0358-40ae-9984-936b4f5354f2" />
