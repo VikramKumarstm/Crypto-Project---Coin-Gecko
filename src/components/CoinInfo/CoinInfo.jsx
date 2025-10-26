@@ -7,20 +7,18 @@ import { chartDays } from '../../helpers/constants'
 
 function CoinInfo({historicData, setDays, setCoinInterval, days, currency}) {
 
-  
+    Chart.register(CategoryScale);
 
   function handleDayChange(e) {
     const daysSelected = e.target.options[e.target.selectedIndex].value
-    setDays(e.target.options[e.target.selectedIndex].value)
+    setDays?.(e.target.options[e.target.selectedIndex].value)
 
     if(daysSelected == 1) {
-      setCoinInterval('');
+      setCoinInterval?.('');
     } else {
-      setCoinInterval('daily');
+      setCoinInterval?.('daily');
     }
   }
-
-  Chart.register(CategoryScale);
 
   if(!historicData) {
     return <Alert message='No data available' type='warning' />
@@ -33,14 +31,14 @@ function CoinInfo({historicData, setDays, setCoinInterval, days, currency}) {
           data={{
             labels: historicData.prices.map(coinPrice => {
               let date = new Date(coinPrice[0]) // CONVERTING UNIX TIMESTAMP TO DATE
-              let time = date.getHours() > 12 ? `${date.getHours() - 12} : ${date.getMinutes()} PM` :
-              `${date.getHours()} : ${date.getMinutes()} AM`;
+              let time = date?.getHours() > 12 ? `${date?.getHours() - 12} : ${date.getMinutes()} PM` :
+              `${date?.getHours()} : ${date?.getMinutes()} AM`;
 
               return days === 1 ? time : date.toLocaleDateString();
             }),
             datasets: [
               {
-                label: `price (Past ${days} ${days === 1 ? 'Day' : 'Days'}) in ${currency.toUpperCase()}`,
+                label: `price (Past ${days} ${days === 1 ? 'Day' : 'Days'}) in ${currency?.toUpperCase()}`,
                 data: historicData.prices.map((coinPrice) => coinPrice[1])
               }
             ]

@@ -16,7 +16,7 @@ function useFetchCoinHistory({coinId}) {
         staleTime: 1000*60*2,
     })
 
-    return [
+    return {
         historicData,
         isLoading,
         isError,
@@ -25,7 +25,7 @@ function useFetchCoinHistory({coinId}) {
         setCoinInterval,
         currency
 
-    ]
+    }
 }
 
 export default useFetchCoinHistory
